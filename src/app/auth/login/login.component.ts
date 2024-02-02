@@ -19,7 +19,6 @@ import { NavComponent } from '../../nav/nav.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    //Location
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
@@ -30,7 +29,6 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router,
     private location: Location,
-    //public nav: NavComponent,
   ) { }
 
   public loginForm = new FormGroup({
@@ -57,7 +55,6 @@ export class LoginComponent {
     this.authService.login(loginModel).subscribe({
       next: () => {
         this.router.navigate(['/books']);
-        //this.nav.activatedItemId = 2;
       },
       error: () => {
         alert("Nope");

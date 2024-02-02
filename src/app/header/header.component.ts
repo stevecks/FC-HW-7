@@ -17,16 +17,16 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  
+
   constructor(
     public authService: AuthService,
     private router: Router,
     private dialog: MatDialog
   ) { }
 
-  //public login(): void {
-  //  this.authService.login();
-  //}
+  public ngOnInit(): void {
+    
+  }
 
   public applogin(): void {
     this.authService.applogin();
@@ -40,10 +40,6 @@ export class HeaderComponent {
     this.router.navigate(['/user']);
   }
 
-//  public logout(): void {
-//    this.authService.logout();
-//  }
-
   public logout(): void {
     const dialogRef = this.dialog.open(LogOutComponent);
     dialogRef.afterClosed().subscribe((res: boolean) => {
@@ -53,8 +49,4 @@ export class HeaderComponent {
     });
   }
 
-  public ngOnInit(): void {
-    //this.guestItems = this.headerService.getguestItems();
-    //this.userItems = this.headerService.getuserItems();
-  }
 }

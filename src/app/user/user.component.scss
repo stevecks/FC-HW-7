@@ -25,7 +25,6 @@ $breakpoint-mobile: 500px;
             width: 100%;
             display: flex;
             flex-direction: column;
-            //justify-content: space-between;
 
             &__info {
                 display: flex;
@@ -55,7 +54,6 @@ $breakpoint-mobile: 500px;
                     &__icon-user {
 
                         &__icon {
-
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -72,7 +70,6 @@ $breakpoint-mobile: 500px;
                     }
 
                     &__text {
-                        //display: flex;
                         margin: 12px;
                     }
                 }
@@ -87,7 +84,6 @@ $breakpoint-mobile: 500px;
                         width: 40px;
                         padding: 0;
                     }
-
                 }
             }
 

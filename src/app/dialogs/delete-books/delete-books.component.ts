@@ -21,9 +21,7 @@ export class DeleteBooksComponent {
   constructor(
     public dialogRef: MatDialogRef<DeleteBooksComponent>,
     public bookService: BookService
-  ) {
-  }
-
+  ) { }
 
   public onClose(): void {
     this.dialogRef.close();
@@ -34,6 +32,6 @@ export class DeleteBooksComponent {
   }
 
   private delete(): void {
-    this.dialogRef.close(true);    
+    this.dialogRef.close(true);
   }
 }

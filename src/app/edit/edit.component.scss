@@ -12,8 +12,6 @@ $breakpoint-mobile: 500px;
 .container {
     display: block;
 
-    //min-height: 100%;
-
     .search {
         display: flex;
         gap: 12px;
@@ -72,15 +70,10 @@ $breakpoint-mobile: 500px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
-                &__icon {
-                    //color: var(--md-sys-color-on-secondary-container);
-                }
             }
         }
 
         &__button {
-            //height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -106,7 +99,6 @@ $breakpoint-mobile: 500px;
 
     .edit {
         margin: 20px;
-        //width: 100%;
         display: flex;
         gap: 12px;
 
@@ -146,7 +138,6 @@ $breakpoint-mobile: 500px;
         grid-template-columns: repeat(3, minmax(180px, 360px));
         justify-content: space-around;
 
-
         @media(max-width: $breakpoint-tablet) {
             grid-template-columns: repeat(2, 2fr);
         }
@@ -154,7 +145,6 @@ $breakpoint-mobile: 500px;
         @media(max-width: $breakpoint-mobile) {
             grid-template-columns: repeat(1, 1fr);
         }
-
 
         &__card {
             display: block;
@@ -267,7 +257,6 @@ $breakpoint-mobile: 500px;
                     @include typography.body-medium();
                 }
             }
-
         }
     }
 }

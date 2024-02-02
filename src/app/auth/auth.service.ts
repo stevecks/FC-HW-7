@@ -28,7 +28,6 @@ export class AuthService {
   }
 
   public get isAuthorized(): boolean {
-    //return this._accessToken != '';
     return this._isAuthorized;
   }
 
@@ -49,7 +48,6 @@ export class AuthService {
 
   public login(model: ILogin): Observable<any> {
     let headers = new HttpHeaders({ ['Content-Type']: 'application/json' });
-
     return this.httpClient.post<any>(environment.apiUrl + 'auth/login', JSON.stringify(model), {
       headers: headers
     })
@@ -78,14 +76,10 @@ export class AuthService {
 
   public applogin(): void {
     this.router.navigate(['/login']);
-    //this._user = loginModel.email;
-    //this._isAuthorized = true;
   }
 
   public appregister(): void {
     this.router.navigate(['/register']);
-    //this._user = loginModel.email;
-    //this._isAuthorized = true;
   }
 
   public logout(): void {
@@ -104,5 +98,4 @@ export class AuthService {
     this._userName = `${authData.name}`;
     this._userEmail = `${authData.email}`;
   }
-
 }

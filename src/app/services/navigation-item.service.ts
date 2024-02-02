@@ -7,7 +7,7 @@ import { INavigationItem } from '../interfaces/navigation-item';
 export class NavigationItemService {
   public pageItems: INavigationItem[] = [
     {
-      name: 'home', //
+      name: 'home', 
       icon: 'home',
       label: 'HOME',
       link: 'home',
@@ -25,6 +25,8 @@ export class NavigationItemService {
       link: 'edit',
     },
   ];
+  
+  /*
   public editItems: INavigationItem[] = [
     {
       name: '5',
@@ -45,12 +47,15 @@ export class NavigationItemService {
       link: 'home',
     },
   ];
+  */
 
   public getpageItems(): INavigationItem[] {
     return this.pageItems;
   }
 
+  /*
   public geteditItems(): INavigationItem[] {
     return this.editItems;
   }
+  */
 }

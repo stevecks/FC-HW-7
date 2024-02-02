@@ -19,33 +19,25 @@ import { AuthService } from '../auth/auth.service';
     MatIconModule,
     MatListModule,
     RouterModule
-    
   ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })
 export class NavComponent implements OnInit {
   public pageItems: INavigationItem[] = [];
-  public editItems: INavigationItem[] = [];
+  //public editItems: INavigationItem[] = [];
   public activatedItemName: string = 'books';
   public activatedItemIcon: string = 'menu_book';
-  item: any;
-
-  //navigationService: NavigationItemService = inject(NavigationItemService);
 
   constructor(
     public navigationService: NavigationItemService,
     public bookService: BookService,
     public authService: AuthService
-    ) {
-    //this.mailItems = this.navigationService.getmailItems();
-    //this.folders = this.navigationService.getfolders();
-    
-  }
+    ) { }
 
   public ngOnInit(): void {
     this.pageItems = this.navigationService.getpageItems();
-    this.editItems = this.navigationService.geteditItems();
+    //this.editItems = this.navigationService.geteditItems();
   }
 
   public onItemClick(item: INavigationItem): void {

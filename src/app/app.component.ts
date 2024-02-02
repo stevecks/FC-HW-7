@@ -20,23 +20,9 @@ import { NavComponent } from './nav/nav.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'FC-HW-7';
+  public title = 'FC-HW-7';
 
   constructor(
     public authService: AuthService,
   ) {}
-
-  public login(): void {
-    //this.authService.login();
-  }
-
-  public logout(): void {
-    this.authService.logout();
-  }
-
-  //public getIsAuthorized(): boolean {
-  //  //console.log(this.authService.isAuthorized);
-  //  return this.authService.isAuthorized;
-  //}
-
 }

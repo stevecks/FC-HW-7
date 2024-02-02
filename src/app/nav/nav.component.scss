@@ -1,6 +1,5 @@
 @use "../../scss/mixins/typography";
 @forward "../../scss/theme";
-//@import "../../scss/variables";
 
 $breakpoint-laptop: 1240px;
 $breakpoint-tablet: 900px;
@@ -24,8 +23,6 @@ $breakpoint-mobile: 500px;
     }
 }
 
-
-
 .nav {
     display: flex;
     flex-direction: column;
@@ -38,7 +35,6 @@ $breakpoint-mobile: 500px;
     @media(max-width: $breakpoint-mobile) {
         padding: 12px 0px 16px 0px;
     }
-
 
     .nav-head-page {
         display: block;
@@ -92,14 +88,12 @@ $breakpoint-mobile: 500px;
             width: 100%;
 
             @media(max-width: $breakpoint-tablet) {
-                //flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 padding-block: 0px;
                 gap: 0px;
 
                 &::before {
-                    //height: 32px;
                     border-radius: 16px;
                 }
             }

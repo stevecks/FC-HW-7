@@ -15,11 +15,9 @@ $breakpoint-mobile: 500px;
 }
 //
 
-
 .container {
   width: 100%;
   display: grid;
-  //gap: 16px;
   grid-template-columns: repeat(1, minmax(240px, 1000px));
   justify-content: space-around;
 
@@ -78,14 +76,13 @@ $breakpoint-mobile: 500px;
           display: flex;
           flex-direction: column;
           gap: 12px;
-          //padding-top: 12px;
-
-          
           height: min-content;
           @include typography.title-small();
+
           @media(max-width: $breakpoint-mobile) {
             @include typography.body-small();
           }
+          
           p {
             display: block;
             text-indent: 12px;

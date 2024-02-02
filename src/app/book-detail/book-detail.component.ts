@@ -23,30 +23,15 @@ export class BookDetailComponent implements OnInit {
     private bookService: BookService,
     private router: Router,
     private route: ActivatedRoute,
-    private dialog: MatDialog
-    //private location: Location,
+    private dialog: MatDialog,
   ) { }
-  
+
   public ngOnInit(): void {
     this.loadBook();
   }
 
-  //private loadBook(): void {
-    //let id =
-
-  //  this.bookService.getBook(id).subscribe(bookFromService => {
-  //  this.bookCardList = bookFromService;
-  //  this.filteredBookCardList = this.bookCardList;
-  //  });
-    //this.filteredBookCardList = this.bookCardList;
-
-    //console.log('');
-  //}
-
-
   private loadBook(): void {
     const id = this.route.snapshot.paramMap.get('id');
-
     if (id) {
       this.bookService.getBook(id).subscribe(
         bookFromService => {
@@ -66,20 +51,10 @@ export class BookDetailComponent implements OnInit {
     this.router.navigate(['/books']);
   }
 
-  //public editBook(): void {
-  //  const dialogRef = this.dialog.open(EditBookComponent);
-  //  dialogRef.afterClosed().subscribe((result: IEditBook) => {
-  //    if (result) {
-  //      this.bookService.editBook(result);
-  //    }
-  //  });
-  //}
-  
   public editBook(): void {
     const dialogRef = this.dialog.open(EditBookComponent, {
       data: this.book
     });
-
     dialogRef.afterClosed().subscribe((result: IEditBook) => {
       if (result) {
         this.bookService.editBook(result).subscribe(() => {
@@ -87,6 +62,5 @@ export class BookDetailComponent implements OnInit {
         });
       }
     });
-    }
-
+  }
 }

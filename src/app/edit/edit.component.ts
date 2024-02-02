@@ -34,10 +34,7 @@ export class EditComponent {
   constructor(
     public bookService: BookService,
     private dialog: MatDialog
-  ) {
-    //this.bookCardList = this.bookService.getAllBooks();
-    //this.filteredBookCardList = this.bookCardList;
-  }
+  ) { }
   public ngOnInit(): void {
     this.noBook = false;
     this.onSearch = false;
@@ -53,7 +50,6 @@ export class EditComponent {
       this.noBook = false;
       if (this.bookCardList.length === 0) this.noBook = true;
     });
-    //this.filteredBookCardList = this.bookCardList;
   }
 
   public filterResults(text: string) {

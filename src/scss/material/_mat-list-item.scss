@@ -1,7 +1,5 @@
 @use '../mixins/typography';
-@forward '../theme/';
 @use '../variables';
-
 
 .mdc-list-item.mdc-list-item.mdc-list-item {
     padding: 16px;
@@ -10,8 +8,6 @@
 .mdc-list-item__start.mdc-list-item__start.mdc-list-item__start {
     margin: 0;
 }
-
-/////////
 
 .mat-mdc-list-item {
     --mdc-list-list-item-container-shape: 28px;
@@ -27,11 +23,10 @@
         --mdc-list-list-item-container-shape: 16px;
         --mdc-list-list-item-container-color: var(--md-ref-palette-tertiary30);
         --mdc-list-list-item-one-line-container-height: 56px;
-
     }
 
-    @media(#{variables.$mobile}) {
-        --mdc-list-list-item-one-line-container-height: 32px;
+    @media(max-width: #{variables.$breakpoint-mobile}) {
+        justify-content: center;
     }
 
     .mat-ripple {
@@ -43,13 +38,11 @@
     color: var(--md-sys-color-on-secondary-container);
 }
 
-
 .mdc-list-item {
     &--activated {
         color: var(--md-sys-color-on-secondary-container);
         --mdc-list-list-item-container-color: var(--md-sys-color-secondary-container);
     }
-
 }
 
 .mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--activated.mdc-list-item--with-leading-icon .mdc-list-item__start {

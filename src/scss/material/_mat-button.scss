@@ -23,10 +23,9 @@
         align-items: center;
         justify-content: space-between;
         gap: 4px;
-        @media(#{variables.$mobile}) {
+        @media(max-width: #{variables.$breakpoint-mobile}) {
             justify-content: center;
         }
-        
     }
 
     .mat-ripple {

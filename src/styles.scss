@@ -37,9 +37,6 @@ $FC-HW-7-theme: mat.define-light-theme((color: (primary: $FC-HW-7-primary,
 @import 'scss/material';
 @import 'scss/variables';
 
-$mobile: "max-width: 500px";
-$tablet: "max-width: 900px";
-
 * {
   padding: 0;
   margin: 0;

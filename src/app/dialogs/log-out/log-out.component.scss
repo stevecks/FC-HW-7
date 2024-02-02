@@ -31,7 +31,7 @@ $breakpoint-mobile: 500px;
         margin-block: 12px;
         margin-bottom: 20px;
         color: var(--md-sys-color-on-tertiary-container);
-        @include typography.headline-small();
+        @include typography.title-small();
     }
 
     .buttons {

@@ -70,5 +70,5 @@ export class EditBookComponent {
   public goBack(): void {
     this.dialogRef.close();
   }
-
+  
 }

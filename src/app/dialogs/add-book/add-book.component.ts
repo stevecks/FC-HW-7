@@ -25,7 +25,6 @@ export class AddBookComponent implements OnInit {
   public bookForm = new FormGroup({
     name: new FormControl<string>('', Validators.required),
     author: new FormControl<string>('', Validators.required),
-    //authorLastName: new FormControl<string>('', Validators.required),
   });
 
   constructor(

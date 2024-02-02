@@ -1,10 +1,6 @@
 @use '../mixins/typography';
 @use '../variables';
 
-$breakpoint-laptop: 1240px;
-$breakpoint-tablet: 900px;
-$breakpoint-mobile: 500px;
-
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     --mdc-filled-text-field-container-color: var(--md-sys-color-on-tertiary);
@@ -21,10 +17,7 @@ $breakpoint-mobile: 500px;
     color: var(--md-sys-color-on-tertiary);
 }
 
-
-
-
-@media(max-width: $breakpoint-mobile) {
+@media(max-width: #{variables.$breakpoint-mobile}) {
     .mat-mdc-form-field-infix.mat-mdc-form-field-infix.mat-mdc-form-field-infix {
         width: 0px;
         max-width: 180px;

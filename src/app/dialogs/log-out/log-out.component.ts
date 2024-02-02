@@ -16,8 +16,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class LogOutComponent {
   constructor(
     public dialogRef: MatDialogRef<LogOutComponent>,
-  ) {
-  }
+  ) { }
 
 
   public onClose(): void {

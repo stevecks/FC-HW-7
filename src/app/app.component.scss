@@ -1,5 +1,4 @@
 @forward "../scss/theme";
-@import "../scss/variables";
 
 $breakpoint-laptop: 1240px;
 $breakpoint-tablet: 900px;
@@ -42,13 +41,15 @@ $breakpoint-mobile: 500px;
 
     .under-nav {
         width: 270px;
+
         @media(max-width: $breakpoint-tablet) {
             width: 80px;
         }
-    
+
         @media(max-width: $breakpoint-mobile) {
             width: 0px;
         }
+
         grid-area: under;
     }
 
@@ -98,5 +99,4 @@ $breakpoint-mobile: 500px;
             height: 80px;
         }
     }
-
 }

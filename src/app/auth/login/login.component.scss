@@ -1,3 +1,6 @@
+@use "../../../scss/mixins/typography";
+@forward "../../../scss/theme";
+
 $breakpoint-laptop: 1240px;
 $breakpoint-tablet: 900px;
 $breakpoint-mobile: 500px;
@@ -18,13 +21,12 @@ $breakpoint-mobile: 500px;
         width: max-content;
         height: max-content;
         padding: 40px;
+        border-radius: 20px;
+        background-color: var(--md-sys-color-tertiary-container);
 
         @media(max-width: $breakpoint-tablet) {
             padding: 20px;
         }
-
-        border-radius: 20px;
-        background-color: var(--md-sys-color-tertiary-container);
 
         .form {
             display: flex;
@@ -41,17 +43,13 @@ $breakpoint-mobile: 500px;
             display: flex;
             flex-direction: row;
             width: 100%;
-            justify-content: start;
+            justify-content: space-between;
             gap: 12px;
 
             .buttons {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-
-                &__button {
-                }
-
             }
         }
     }
