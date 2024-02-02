@@ -1,0 +1,102 @@
+@forward "../scss/theme";
+@import "../scss/variables";
+
+$breakpoint-laptop: 1240px;
+$breakpoint-tablet: 900px;
+$breakpoint-mobile: 500px;
+
+.nav.nav {
+    position: fixed;
+    display: block;
+    width: 270px;
+    height: 100dvh;
+    grid-area: nav;
+    z-index: 10;
+
+    @media(max-width: $breakpoint-tablet) {
+        width: 80px;
+    }
+
+    @media(max-width: $breakpoint-mobile) {
+        width: 100%;
+        height: 84px;
+        top: calc(100vh - 84px);
+    }
+}
+
+.footer-for-navigation-bar {
+    height: 84px;
+    width: 100%;
+    display: none;
+
+    @media(max-width: $breakpoint-mobile) {
+        display: block;
+    }
+}
+
+.container.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "under content";
+
+    .under-nav {
+        width: 270px;
+        @media(max-width: $breakpoint-tablet) {
+            width: 80px;
+        }
+    
+        @media(max-width: $breakpoint-mobile) {
+            width: 0px;
+        }
+        grid-area: under;
+    }
+
+    .content {
+        grid-area: content;
+        background-color: none;
+    }
+}
+
+.container-1.container-1 {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    @media(max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "main" "footer";
+    }
+
+    .header {
+        grid-area: header;
+        height: 100px;
+        background-color: var(--md-sys-color-surface-container-lowest);
+
+        @media(max-width: $breakpoint-tablet) {
+            height: 80px;
+        }
+    }
+
+    .main {
+        grid-area: main;
+        background-color: var(--md-sys-color-surface-container-high);
+    }
+
+    .footer {
+        grid-area: footer;
+        height: 100px;
+        background-color: var(--md-sys-color-surface-container-lowest);
+
+        @media(max-width: $breakpoint-tablet) {
+            height: 80px;
+        }
+    }
+
+}

@@ -1,0 +1,92 @@
+@use '../mixins/typography';
+@forward '../theme/';
+@use '../variables';
+
+
+.mdc-list-item.mdc-list-item.mdc-list-item {
+    padding: 16px;
+}
+
+.mdc-list-item__start.mdc-list-item__start.mdc-list-item__start {
+    margin: 0;
+}
+
+/////////
+
+.mat-mdc-list-item {
+    --mdc-list-list-item-container-shape: 28px;
+    --mdc-list-list-item-label-text-color: var(--md-sys-color-on-surface-variant);
+    --mdc-list-list-item-hover-label-text-color: var(--md-sys-color-on-secondary-container);
+    --mdc-list-list-item-hover-state-layer-color: var(--md-sys-color-on-secondary-container);
+    --mdc-list-list-item-focus-state-layer-color: var(--md-sys-color-on-secondary-container);
+    --mdc-list-list-item-hover-state-layer-opacity: 0.08;
+    --mdc-list-list-item-selected-container-opacity: 0.1;
+    --mdc-list-list-item-one-line-container-height: 56px;
+
+    &.section__item--search {
+        --mdc-list-list-item-container-shape: 16px;
+        --mdc-list-list-item-container-color: var(--md-ref-palette-tertiary30);
+        --mdc-list-list-item-one-line-container-height: 56px;
+
+    }
+
+    @media(#{variables.$mobile}) {
+        --mdc-list-list-item-one-line-container-height: 32px;
+    }
+
+    .mat-ripple {
+        opacity: 0.1;
+    }
+}
+
+.mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--activated .mdc-list-item__primary-text {
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+
+.mdc-list-item {
+    &--activated {
+        color: var(--md-sys-color-on-secondary-container);
+        --mdc-list-list-item-container-color: var(--md-sys-color-secondary-container);
+    }
+
+}
+
+.mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--activated.mdc-list-item--with-leading-icon .mdc-list-item__start {
+    color: var(--md-sys-color-on-secondary-container);
+        --mdc-list-list-item-container-color: var(--md-sys-color-secondary-container);
+}
+
+
+
+
+
+
+
+
+
+/*
+.mdc-list-item {
+    //--_icon-state-opacity: 0;
+
+    &::before {
+        //display: none;
+    }
+
+    &:hover {
+        --_icon-state-opacity: var(--mdc-list-list-item-hover-state-layer-opacity);
+    }
+
+    .custom-icon {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: var(--mdc-list-list-item-hover-state-layer-color);
+            opacity: var(--_icon-state-opacity);
+        }
+    }
+}
+*/

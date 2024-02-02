@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="content">
+        <div class="user">
+            <div class="user__info">
+                <div class="user__info__left-section">
+                    <div class="user__info__left-section__icon-user">
+                        <div mat-icon-button class="user__info__left-section__icon-user__icon">
+                            <span class="material-symbols-outlined">person</span>
+                        </div>
+                    </div>
+                    <div class="user__info__left-section__text">
+                        <div class="user__info__left-section__text__name">{{getUserName()}}</div>
+                        <div class="user__info__left-section__text__email">{{getUserEmail()}}</div>
+                    </div>
+                </div>
+                <div class="user__info__edit">
+                    <button mat-flat-button class="user__info__edit__button">
+                        <span class="material-symbols-outlined">settings</span>
+                    </button>
+                </div>
+            </div>
+            <div class="user__descr">
+                <div class="user__descr__label">Statistics</div>
+                <div class="user__descr__info">Books:</div>
+                <div class="user__descr__info">Added books:</div>
+                <div class="user__descr__info">Deleted books:</div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button mat-flat-button (click)="goBack()" class="buttons__button">
+                <div matListItemIcon class="buttons__button__icon">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </div>
+                <div class="buttons__button__label">
+                    <span>Back</span>
+                </div>
+            </button>
+            <button mat-flat-button class="buttons__button">
+                <div matListItemIcon class="buttons____button__icon">
+                    <span class="material-symbols-outlined">edit</span>
+                </div>
+                <div class="buttons__button__label">
+                    <span>Edit</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>

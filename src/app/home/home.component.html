@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="label">
+        <h3 class="label__name">WELCOME <span>{{getUserName()}} </span></h3>
+    </div>
+    <div class="list">
+
+        <div class="list__card">
+            <div class="list__card__info">
+                <div class="list__card__info__name">ABOUT</div>
+                <div class="list__card__info__text" [@expandAnimation]="isExpandedAbout ? 'expanded' : 'collapsed'">
+                    <p>Проект BOOKS – это уникальная и вдохновляющая платформа, созданная с
+                        использованием передовых технологий веб-разработки, в том числе Angular. Наша цель – не только
+                        предоставить пользователям доступ к захватывающему миру литературы, но и обеспечить удобство
+                        использования с помощью небольшого, но эффективного набора инструментов для работы со списком
+                        книг.</p>
+                    <p>Angular, как ведущий фреймворк для разработки веб-приложений, обеспечивает
+                        высокую производительность и мощный интерфейс нашего проекта. Этот фреймворк позволяет нам
+                        создавать
+                        не только привлекательный дизайн, но и предоставлять надежные инструменты для управления списком
+                        литературы.</p>
+                    <p>Проект BOOKS – это не только хранилище литературных произведений, но и практичная платформа с
+                        интуитивными средствами для управления списком книг. Мы стремимся сделать ваше взаимодействие с
+                        нашим проектом максимально комфортным, предоставляя инструменты, которые облегчают поиск,
+                        добавление и управление вашим литературным опытом.</p>
+                    <div class="offset"></div>
+                </div>
+            </div>
+            <div class="list__card__buttons">
+                <button mat-flat-button class="list__card__buttons__button" type="button"
+                    (click)="toggleAnimation('about')">
+                    <div class="material-symbols-outlined search__place__button__icon"
+                        [@rotateIcon]="isExpandedAbout ? 'expanded' : 'collapsed'">
+                        expand_more</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="list__card">
+            <div class="list__card__info">
+                <div class="list__card__info__name">FUNCTIONAL</div>
+                <div class="list__card__info__text"
+                    [@expandAnimation]="isExpandedFunctional ? 'expanded' : 'collapsed'">
+                    <p>Добро пожаловать в раздел "Функциональность" нашего проекта BOOKS! Мы стремимся предоставить вам
+                        максимально удобные и разносторонние инструменты для управления вашей литературной коллекцией.
+                        Вот несколько ключевых функциональных возможностей, которые делают наш проект особенным:</p>
+                    <p>Добавление книги.</p>
+                    <p>Редактирование информации о книге.</p>
+                    <p>Удаление книги.</p>
+                    <p>Поиск по названию.</p>
+                    <p>Удаление всего списка книг.</p>
+                    <p>Генерация новых книг.</p>
+                    <p>Проект BOOKS создан для того, чтобы сделать ваш опыт управления книгами простым, удобным и
+                        захватывающим. Наслаждайтесь функциональностью, которую мы предоставляем, и создавайте свой
+                        идеальный мир литературы!</p>
+                    <div class="offset"></div>
+
+                </div>
+            </div>
+            <div class="list__card__buttons">
+                <button mat-flat-button class="list__card__buttons__button" type="button"
+                    (click)="toggleAnimation('functional')">
+                    <div class="material-symbols-outlined search__place__button__icon"
+                        [@rotateIcon]="isExpandedFunctional ? 'expanded' : 'collapsed'">
+                        expand_more</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="list__card">
+            <div class="list__card__info">
+                <div class="list__card__info__name">IDEAS</div>
+                <div class="list__card__info__text" [@expandAnimation]="isExpandedIdeas ? 'expanded' : 'collapsed'">
+                    <p>Добро пожаловать в раздел "Идеи" нашего проекта BOOKS! Мы постоянно работаем над
+                        совершенствованием пользовательского опыта, и вот несколько захватывающих идей, которые мы
+                        рассматриваем для будущего развития:</p>
+                    <p>Эстетика и Цветовая Гамма.</p>
+                    <p>Расширенные Функциональности.</p>
+                    <p>Списки "Избранное" и Пользовательские Списки.</p>
+                    <p>Персонализированные Рекомендации.</p>
+                    <p>Интеграция с Социальными Сетями.</p>
+                    <p>Генерация новых книг.</p>
+                    <p>Проект BOOKS развивается благодаря вашим идеям и обратной связи. Следите за обновлениями, ведь
+                        каждое изменение направлено на то, чтобы сделать ваш опыт в мире книг неповторимым и
+                        удовлетворительным!</p>
+                    <div class="offset"></div>
+
+                </div>
+            </div>
+            <div class="list__card__buttons">
+                <button mat-flat-button class="list__card__buttons__button" type="button"
+                    (click)="toggleAnimation('ideas')">
+                    <div class="material-symbols-outlined search__place__button__icon"
+                        [@rotateIcon]="isExpandedIdeas ? 'expanded' : 'collapsed'">
+                        expand_more</div>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

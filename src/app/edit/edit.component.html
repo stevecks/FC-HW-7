@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="search">
+        <div class="search__place" [ngClass]="{'no-books-style': noBook}">
+            <input type="text" placeholder="Filter by name books" [disabled]="noBook" #filter [(ngModel)]="searchText">
+            <button mat-icon-button *ngIf="searchText.length > 0" class="search__place__button" type="button"
+                (click)="clear()">
+                <div class="material-symbols-outlined search__place__button__icon">close</div>
+            </button>
+            <div class="line" *ngIf="searchText.length > 0"></div>
+            <button mat-icon-button class="search__place__button" type="button" (click)="reset()" *ngIf="onSearch">
+                <div class="material-symbols-outlined search__place__button__icon">restart_alt</div>
+            </button>
+            <button mat-icon-button class="search__place__button" type="button" [disabled]="noBook"
+                (click)="filterResults(filter.value)">
+                <div class="material-symbols-outlined search__place__button__icon">search</div>
+            </button>
+        </div>
+    </div>
+
+    <div class="edit">
+        <button mat-flat-button class="edit__button" (click)="addBook()">
+            <div matListItemIcon class="edit__button__icon">
+                <span class="material-symbols-outlined">add</span>
+            </div>
+            <div class="edit__button__label">
+                <span>ADD</span>
+            </div>
+        </button>
+        <button mat-flat-button class="edit__button" (click)="generateBooks()">
+            <div matListItemIcon class="edit__button__icon">
+                <span class="material-symbols-outlined">playlist_add</span>
+            </div>
+            <div class="edit__button__label">
+                <span>GENERATE</span>
+            </div>
+        </button>
+        <button mat-flat-button class="edit__button" [disabled]="noBook" (click)="deleteAllBooks()">
+            <div matListItemIcon class="edit__button__icon">
+                <span class="material-symbols-outlined">delete</span>
+            </div>
+            <div class="edit__button__label">
+                <span>DELETE ALL</span>
+            </div>
+        </button>
+    </div>
+    <div class="books">
+        <div class="books__card" *ngFor="let book of filteredBookCardList">
+            <div class="pattern"></div>
+            <div class="books__card__content">
+                <div class="books__card__content__info">
+                    <div class="books__card__content__info__name">{{book.name}}</div>
+                    <div class="books__card__content__info__author">{{book.author}}</div>
+                </div>
+                <div class="books__card__content__button-container">
+                    <button mat-flat-button class="books__card__content__button-container__button" (click)="deleteBook(book.id)">
+                        <div matListItemIcon class="books__card__content__button-container__button__icon">
+                            <span class="material-symbols-outlined">close</span>
+                        </div>
+                        <div class="books__card__content__button-container__button__label">
+                            <span>delete</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="no-books" *ngIf="noBook ">
+        <div class="no-books__message">
+            <div class="no-books__message__info">
+                <h3 class="no-books__message__info__label">NO BOOKS</h3>
+                <p class="no-books__message__info__descr">В вашем списке нет книг. <br>
+                    Воспользуйтесь кнопкой ADD, чтобы добавить новую книгу. <br> Также Вы 
+                    можете сгенерировать несколько книг сразу. Для этого используйте 
+                    кнопку GENERATE.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="no-books-search" *ngIf="noBookSearch">
+        <div class="no-books-search__message">
+            <div class="no-books-search__message__info">
+                <h3 class="no-books-search__message__info__label">BOOKS NOT FOUND</h3>
+                <p class="no-books-search__message__info__descr">По Вашему запросу ничего не найдено.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

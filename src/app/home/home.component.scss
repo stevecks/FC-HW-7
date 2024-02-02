@@ -1,0 +1,111 @@
+@use "../../scss/mixins/typography";
+@forward "../../scss/theme";
+
+$breakpoint-laptop: 1240px;
+$breakpoint-tablet: 900px;
+$breakpoint-mobile: 500px;
+
+// for animation
+.list__card__info__text {
+  overflow: hidden;
+}
+
+.list__card__info__text.expanded {
+  overflow: visible;
+}
+//
+
+
+.container {
+  width: 100%;
+  display: grid;
+  //gap: 16px;
+  grid-template-columns: repeat(1, minmax(240px, 1000px));
+  justify-content: space-around;
+
+  .label {
+    display: block;
+    margin-block: 16px;
+    margin-inline: 28px;
+
+    &__name {
+      color: var(--md-sys-color-surface-tint);
+      @include typography.headline-large();
+
+      @media(max-width: $breakpoint-tablet) {
+        @include typography.headline-small();
+      }
+
+      span {
+        margin-inline: 16px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .list {
+    margin-inline: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 12px;
+      border-radius: 34px;
+      height: 100%;
+      width: 100%;
+      background-color: var(--md-sys-color-primary-container);
+      color: var(--md-sys-color-on-primary-container);
+
+      &__info {
+        display: block;
+        margin-inline: 8px;
+        height: 100%;
+
+        &__name {
+          display: flex;
+          align-items: center;
+          @include typography.headline-small();
+          margin-block: 6px;
+          margin-left: 12px;
+        }
+
+        &__text {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          //padding-top: 12px;
+
+          
+          height: min-content;
+          @include typography.title-small();
+          @media(max-width: $breakpoint-mobile) {
+            @include typography.body-small();
+          }
+          p {
+            display: block;
+            text-indent: 12px;
+          }
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        &__button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

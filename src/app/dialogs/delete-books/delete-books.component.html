@@ -1,0 +1,22 @@
+<div class="container">
+    <p mat-dialog-title class="label">DELETE BOOKS</p>
+    <div mat-dialog-content class="text">Вы уверены?</div>
+    <div mat-dialog-actions class="buttons">
+        <button mat-flat-button class="buttons__button" (click)="onClose()">
+            <div matListItemIcon class="buttons__button__icon">
+                <span class="material-symbols-outlined">close</span>
+            </div>
+            <div class="buttons__button__label">
+                <span>Close</span>
+            </div>
+        </button>
+        <button mat-flat-button class="buttons__button" (click)="onOk()">
+            <div matListItemIcon class="buttons__button__icon">
+                <span class="material-symbols-outlined">done</span>
+            </div>
+            <div class="buttons__button__label">
+                <span>Ok</span>
+            </div>
+        </button>
+    </div>
+</div>

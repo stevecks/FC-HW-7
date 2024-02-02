@@ -1,0 +1,32 @@
+@use '../mixins/typography';
+@use '../variables';
+
+$breakpoint-laptop: 1240px;
+$breakpoint-tablet: 900px;
+$breakpoint-mobile: 500px;
+
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    --mdc-filled-text-field-container-color: var(--md-sys-color-on-tertiary);
+    --mdc-filled-text-field-input-text-color: var(--md-sys-color-on-tertiary-container);
+
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    color: var(--md-sys-color-on-tertiary);
+    background-color: var(--md-sys-color-tertiary);
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: var(--md-sys-color-on-tertiary);
+}
+
+
+
+
+@media(max-width: $breakpoint-mobile) {
+    .mat-mdc-form-field-infix.mat-mdc-form-field-infix.mat-mdc-form-field-infix {
+        width: 0px;
+        max-width: 180px;
+    }
+}

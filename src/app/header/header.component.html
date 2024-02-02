@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="section">
+        <div class="section__label">
+            <h1 class="section__label__name">BOOKS</h1>
+            <h2 class="section__label__descr">HW-7</h2>
+        </div>
+        <div *ngIf="authService.isAuthorized === false"
+         class="section__content section__content--for-guest">
+            <button mat-flat-button (click)="appregister()" class="section__content__item">
+                <div matListItemIcon class="section__content__item__icon">
+                    <span class="material-symbols-outlined">person_add</span>
+                </div>
+                <div class="section__content__item__label">
+                    <span>Sign Up</span>
+                </div>
+            </button>
+            <button mat-flat-button (click)="applogin()" class="section__content__item">
+                <div matListItemIcon class="section__content__item__icon">
+                    <span class="material-symbols-outlined">login</span>
+                </div>
+                <div class="section__content__item__label">
+                    <span>Log In</span>
+                </div>
+            </button>
+        </div>
+        <div *ngIf="authService.isAuthorized === true"
+        class="section__content section__content--for-user">
+            <button mat-icon-button (click)="appUser()" class="section__content__icon-user">
+                <span class="material-symbols-outlined">person</span>
+            </button>
+            <button mat-flat-button (click)="logout()" class="section__content__item">
+                <div matListItemIcon class="section__content__item__icon">
+                    <span class="material-symbols-outlined">logout</span>
+                </div>
+                <div class="section__content__item__label">
+                    <span>Log Out</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>

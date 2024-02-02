@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="content">
+        <div class="book">
+            <div class="book__info">
+                <div class="pattern"></div>
+                <div class="book__info__name">{{ book?.name }}</div>
+                <div class="book__info__author">{{ book?.author }}</div>
+            </div>
+            <div class="book__button-container">
+                <button mat-flat-button (click)="goBack()" class="book__button-container__button">
+                    <div matListItemIcon class="book__button-container__button__icon">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                    </div>
+                    <div class="book__button-container__button__label">
+                        <span>Back</span>
+                    </div>
+                </button>
+                <div class="button-container-right">
+                    <button mat-flat-button (click)="editBook()" class="book__button-container__button">
+                        <div matListItemIcon class="book__button-container__button__icon">
+                            <span class="material-symbols-outlined">edit_note</span>
+                        </div>
+                        <div class="book__button-container__button__label">
+                            <span>Edit</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
